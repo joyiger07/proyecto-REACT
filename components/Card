@@ -1,0 +1,7 @@
+export default function Card({titulo, descripcion, img}) {
+    return <div ClassName="card">
+    <img src={img} />
+    <h3>{titulo}</h3>
+    <p>{descripcion}</p>
+    </div>
+}
