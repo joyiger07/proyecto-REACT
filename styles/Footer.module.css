@@ -1,0 +1,9 @@
+.pie {
+    display: flex;
+    justify-content: space-around;
+    padding: 35px;
+    height: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aqua;
+}

@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/Navbar'
+import Cards from '@/components/cards'
+import styles from '@/styles/Home.module.css'
 import Footer from '@/components/Footer'
+import style from '@/styles/Footer.module.css'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,18 +21,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <header className={styles.navbar}>
+     
           <Navbar />
-        </header>
-        <section className={styles.section}>secion1</section>  
-        <section className={styles.section}>secion2</section>
-        <section className={styles.section}>secion3</section>  
+      <section className={styles.seccion}>
+      <Cards />
+       <Cards />
+       <Cards />
+      </section>
+      <footer className={style.pie}>
+      <Footer />
+      </footer>
 
-        <footer className={styles.footer}>
-         
-          <Footer />
-        
-        </footer> 
       </main>
     </>
   )

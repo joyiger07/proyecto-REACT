@@ -1,27 +1,4 @@
-
-button{
-    background-color: rgb(221, 151, 218);
-}
-button-Navbar {
-    background-color: aqua;
-}
-section {
-    display: flex;
-    padding: 5%;
-    justify-content: center;
-    background-color: rgb(76, 115, 189);
-}
-header {
-    display: flex;
-    padding: 2%;
-    justify-content: center;
-    background-color: aquamarine;
-}
-
-footer {
-   
-    padding: 5%;
-    display: flex;
-    justify-content: center;
-    background-color: aquamarine;
+body{
+    margin: 0;
+    padding: 0;
 }
