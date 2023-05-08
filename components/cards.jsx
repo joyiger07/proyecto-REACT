@@ -1,32 +1,30 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { useState } from "react";
+import  FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteOutlinedIcon from "@mui/icons-material/AddLocationAltRounded";
+import { useEffect } from "react";
 
-export default function Cards() {
-  return (
-    <Card sx={{ maxWidth: 345, margin:5 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-  );
-}
+
+export default function Cards({titulo, descripcion, imgUrl, setCarrito}) {
+  const [liked, setLiked] = useState(false)
+
+  function chageHangler() {
+    setCarrito(prev => !liked ? prev +1 : prev -1)
+    setLiked(prev => !prev)
+  }
+
+      return <div className="cards">
+        <img src={imgUrl} />
+        <h3>{titulo}</h3>
+        <p>{descripcion}</p>     
+        <button 
+          className={"button" + liked && " liked"}
+          onClick={() => chageHangler()}
+          >
+         {
+             liked ? <FavoriteIcon/> : <FavoriteOutlinedIcon/> 
+         }
+        </button>
+  
+  </div>
+} 
+ 
