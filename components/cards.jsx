@@ -1,30 +1,21 @@
-import { useState } from "react";
-import  FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteOutlinedIcon from "@mui/icons-material/AddLocationAltRounded";
-import { useEffect } from "react";
+import styles from '@/styles/Cards.module.css'
+import Link from "next/link";
 
+const Cards = ({id, name, description, image, change, dark}) => {
 
-export default function Cards({titulo, descripcion, imgUrl, setCarrito}) {
-  const [liked, setLiked] = useState(false)
-
-  function chageHangler() {
-    setCarrito(prev => !liked ? prev +1 : prev -1)
-    setLiked(prev => !prev)
-  }
-
-      return <div className="cards">
-        <img src={imgUrl} />
-        <h3>{titulo}</h3>
-        <p>{descripcion}</p>     
+      return <div className={styles.Cards + " " + (dark && styles.dark)}>
+        <img src={image} className={styles.image}/>
+        <h3>{name}</h3>
+        <p className={styles.paragraph}>loren maria delgado{description}</p> 
+         <Link href={`/characters/${id}`} className={styles.button}>Iniciar</Link>  
         <button 
-          className={"button" + liked && " liked"}
-          onClick={() => chageHangler()}
-          >
-         {
-             liked ? <FavoriteIcon/> : <FavoriteOutlinedIcon/> 
-         }
-        </button>
+          className={styles.button}
+          onClick={() => change(name, image)}> inicio
+        </button> 
   
   </div>
 } 
- 
+export default Cards
+
+
+
