@@ -1,7 +1,7 @@
 .Cards {
     width: 350px;
     height: 430px;
-    background-color: #fff;
+    background-color: #65e265;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(6,6,6,.1);
     text-align: center;
@@ -10,7 +10,7 @@
     
 }
 .Cards.dark {
-    background-color: #666;
+    background-color: #b4d481;
     box-shadow: 3px 3px 10px rgba(255,255,255,.1);
 }
 .Cards:hover {
@@ -30,9 +30,10 @@
     border-radius: 100%;
     transition: .3s;
     padding: 5%;
+  
 }
 .Cards h3 {
-    color: #3abfe4;
+    color: #403ae4;
 }
 .paragraph {
     margin: 10px 0;
@@ -40,13 +41,13 @@
     width: 100%;
 }
 .Cards.dark .paragraph {
-    color: #fff;
+    color: #e66767;
 }
 .button {
     margin: 20px 0;
     padding: 10px 20px;
     color: #fff;
-    background-color: #0099ffef;
+    background-color: #5d63a0ef;
     font-size: 1rem;
     font-weight: 600;
     border: none;
@@ -54,8 +55,8 @@
     cursor: pointer;
 }
 .Cards.dark .button {
-    color: #111;
+    color: #3dd8e9;
 }
 .button:hover {
-    background-color: #005994ef;
+    background-color: #e72bd4ef;
 }

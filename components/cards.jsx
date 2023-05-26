@@ -7,7 +7,8 @@ const Cards = ({id, name, description, image, change, dark}) => {
         <img src={image} className={styles.image}/>
         <h3>{name}</h3>
         <p className={styles.paragraph}>loren maria delgado{description}</p> 
-         <Link href={`/characters/${id}`} className={styles.button}>Iniciar</Link>  
+         <Link href={`/characters/${id}`} className={styles.button}>Ir a</Link>  
+         <br />
         <button 
           className={styles.button}
           onClick={() => change(name, image)}> inicio

@@ -16,3 +16,6 @@ a {
   padding: 0;
   box-sizing: border-box;
 }
+.Navbar.button {
+  background-color: black;
+}
